@@ -6,6 +6,8 @@
 
 <title>Atılgan Taşımacılık & Lojistik</title>
 
+<meta name="description" content="İstanbul, Gebze, Silivri ve Tekirdağ/Çerkezköy arası profesyonel nakliye ve lojistik hizmetleri.">
+
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
@@ -15,6 +17,10 @@ margin:0;
 padding:0;
 box-sizing:border-box;
 font-family:'Poppins',sans-serif;
+}
+
+html{
+scroll-behavior:smooth;
 }
 
 body{
@@ -30,20 +36,21 @@ margin:auto;
 }
 
 .hero{
-height:100vh;
+min-height:100vh;
 background:
 linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),
 url('Banner.jpeg');
-background-size:contain;
+background-position:center;
 background-repeat:no-repeat;
-background-position:center center;
-background-color:#111827;
+background-size:contain;
+background-color:#0f172a;
 
 display:flex;
 align-items:center;
 justify-content:center;
 text-align:center;
-padding:20px;
+
+padding:40px 20px;
 }
 
 .hero-content{
@@ -52,12 +59,13 @@ color:white;
 }
 
 .hero h1{
-font-size:60px;
+font-size:58px;
+font-weight:700;
 margin-bottom:20px;
 }
 
 .hero p{
-font-size:24px;
+font-size:22px;
 margin-bottom:35px;
 }
 
@@ -69,6 +77,7 @@ flex-wrap:wrap;
 }
 
 .btn{
+display:inline-block;
 padding:15px 30px;
 border-radius:8px;
 text-decoration:none;
@@ -76,67 +85,26 @@ font-weight:600;
 transition:.3s;
 }
 
-.primary{
+.btn-primary{
 background:#0f4c81;
 color:white;
 }
 
-.primary:hover{
+.btn-primary:hover{
 background:#0c3d67;
 }
 
-.whatsapp-btn{
+.btn-whatsapp{
 background:#25D366;
 color:white;
 }
 
-.whatsapp-btn:hover{
-transform:translateY(-3px);
+.btn-whatsapp:hover{
+transform:translateY(-2px);
 }
 
-.slider{
-padding:70px 0;
-background:white;
-}
-
-.slider-container{
-position:relative;
-max-width:1000px;
-margin:auto;
-overflow:hidden;
-border-radius:16px;
-box-shadow:0 15px 40px rgba(0,0,0,.12);
-}
-
-.slide{
-display:none;
-width:100%;
-height:500px;
-object-fit:cover;
-}
-
-.slide.active{
-display:block;
-}
-
-.prev,.next{
-position:absolute;
-top:50%;
-transform:translateY(-50%);
-background:rgba(0,0,0,.5);
-color:white;
-border:none;
-font-size:28px;
-cursor:pointer;
-padding:12px 18px;
-}
-
-.prev{
-left:10px;
-}
-
-.next{
-right:10px;
+.section{
+padding:80px 0;
 }
 
 .section-title{
@@ -146,13 +114,9 @@ margin-bottom:50px;
 color:#0f172a;
 }
 
-.services{
-padding:80px 0;
-}
-
 .service-grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
 gap:25px;
 }
 
@@ -165,17 +129,12 @@ transition:.3s;
 }
 
 .card:hover{
-transform:translateY(-5px);
+transform:translateY(-6px);
 }
 
 .card h3{
-margin-bottom:10px;
+margin-bottom:12px;
 color:#0f172a;
-}
-
-.about{
-padding:80px 0;
-background:#fff;
 }
 
 .about-box{
@@ -185,15 +144,51 @@ border-radius:16px;
 box-shadow:0 10px 30px rgba(0,0,0,.08);
 }
 
-.features{
+.slider-section{
 padding:80px 0;
-background:#f8fafc;
+background:white;
 }
 
-.feature-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:25px;
+.slider-container{
+position:relative;
+max-width:1000px;
+margin:auto;
+overflow:hidden;
+border-radius:18px;
+box-shadow:0 15px 40px rgba(0,0,0,.12);
+}
+
+.slide{
+display:none;
+width:100%;
+height:450px;
+object-fit:contain;
+background:white;
+}
+
+.slide.active{
+display:block;
+}
+
+.prev,
+.next{
+position:absolute;
+top:50%;
+transform:translateY(-50%);
+background:rgba(0,0,0,.55);
+color:white;
+border:none;
+cursor:pointer;
+font-size:24px;
+padding:12px 18px;
+}
+
+.prev{
+left:10px;
+}
+
+.next{
+right:10px;
 }
 
 .contact{
@@ -210,10 +205,10 @@ text-decoration:none;
 
 .hours{
 display:inline-block;
-margin-top:15px;
-padding:8px 16px;
 background:#16a34a;
+padding:8px 16px;
 border-radius:30px;
+margin-top:15px;
 font-weight:600;
 }
 
@@ -238,6 +233,10 @@ font-size:18px;
 height:250px;
 }
 
+.section-title{
+font-size:30px;
+}
+
 }
 
 </style>
@@ -257,11 +256,11 @@ height:250px;
 
 <div class="buttons">
 
-<a href="#iletisim" class="btn primary">
-Hemen Teklif Al
+<a href="tel:05415013362" class="btn btn-primary">
+📞 Hemen Ara
 </a>
 
-<a href="https://wa.me/905415013362" target="_blank" class="btn whatsapp-btn">
+<a href="https://wa.me/905415013362" target="_blank" class="btn btn-whatsapp">
 WhatsApp'tan Yaz
 </a>
 
@@ -271,7 +270,93 @@ WhatsApp'tan Yaz
 
 </section>
 
-<section class="slider">
+<section class="section">
+
+<div class="container">
+
+<h2 class="section-title">Hizmetlerimiz</h2>
+
+<div class="service-grid">
+
+<div class="card">
+<h3>🚚 İstanbul İçi ve Bölgesel Lojistik</h3>
+<p>
+İstanbul içi nakliye ile Gebze, Silivri ve Tekirdağ/Çerkezköy arasında düzenli ve güvenilir bölgesel lojistik hizmetleri sunuyoruz.
+</p>
+</div>
+
+<div class="card">
+<h3>👔 Tekstil Taşımacılığı</h3>
+<p>
+Askılı veya kolili tekstil ürünlerinizin hassasiyetine uygun, güvenli ve zamanında teslimat çözümleri.
+</p>
+</div>
+
+<div class="card">
+<h3>🏭 Endüstriyel Taşımacılık</h3>
+<p>
+Havalandırma ekipmanları, sanayi ürünleri, makine ve üretim ekipmanlarının profesyonel taşınması.
+</p>
+</div>
+
+<div class="card">
+<h3>📦 Paletli & Parsiyel Yük Taşımacılığı</h3>
+<p>
+Şehir içi ve şehirler arası paletli yük, parça yük ve parsiyel taşımacılık hizmetleri.
+</p>
+</div>
+
+<div class="card">
+<h3>🏠 Ofis ve Evden Eve Nakliyat</h3>
+<p>
+Ofis ve ev eşyalarınız için planlı, güvenli ve sigortalı taşımacılık çözümleri.
+</p>
+</div>
+
+<div class="card">
+<h3>🎪 Reklam ve Fuar Taşımacılığı</h3>
+<p>
+Reklam ve çekim ekipmanlarınızı, fuar ürünlerinizi belirlediğiniz alana taşıyor; talep halinde organizasyon sonuna kadar bekleyerek dönüş taşımasını da gerçekleştiriyoruz. Gidiş-dönüş işlerde ekonomik tarife sunuyoruz.
+</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<div class="container">
+
+<div class="about-box">
+
+<h2 class="section-title">Hakkımızda</h2>
+
+<p>
+Atılgan Taşımacılık & Lojistik olarak müşterilerimize güvenilir, hızlı ve profesyonel taşımacılık hizmetleri sunuyoruz.
+</p>
+
+<br>
+
+<p>
+İstanbul, Gebze, Silivri ve Tekirdağ/Çerkezköy hattında güçlü operasyon yapımız ile bireysel ve kurumsal müşterilerimize hizmet veriyoruz.
+</p>
+
+<br>
+
+<p>
+Müşteri memnuniyeti, zamanında teslimat ve güvenli taşıma ilkelerimiz doğrultusunda faaliyet göstermekteyiz.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="slider-section">
 
 <div class="container">
 
@@ -294,112 +379,15 @@ WhatsApp'tan Yaz
 
 </section>
 
-<section class="services">
+<section class="contact">
 
 <div class="container">
 
-<h2 class="section-title">Hizmetlerimiz</h2>
-
-<div class="service-grid">
-
-<div class="card">
-<h3>🚚 Şehirlerarası Nakliyat</h3>
-<p>Türkiye'nin her noktasına güvenli taşımacılık.</p>
-</div>
-
-<div class="card">
-<h3>🏠 Ev Taşıma</h3>
-<p>Profesyonel ekip ve planlı operasyon.</p>
-</div>
-
-<div class="card">
-<h3>🏢 Ofis Taşıma</h3>
-<p>Kurumsal firmalara özel çözümler.</p>
-</div>
-
-<div class="card">
-<h3>📦 Parça Eşya Taşıma</h3>
-<p>Ekonomik ve hızlı taşıma hizmeti.</p>
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<section class="about">
-
-<div class="container">
-
-<div class="about-box">
-
-<h2 class="section-title">Hakkımızda</h2>
-
-<p>
-Atılgan Taşımacılık & Lojistik olarak müşterilerimize güvenilir, hızlı ve profesyonel taşımacılık hizmetleri sunuyoruz.
-</p>
-
-<br>
-
-<p>
-İstanbul, Gebze ve Çerkezköy merkezli operasyonlarımızla bölgesel ve şehirler arası taşımacılık ihtiyaçlarına çözüm üretiyoruz.
-</p>
-
-<br>
-
-<p>
-Müşteri memnuniyeti, zamanında teslimat ve güvenli taşıma ilkelerimiz doğrultusunda hizmet vermekteyiz.
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-<section class="features">
-
-<div class="container">
-
-<h2 class="section-title">Neden Atılgan Taşımacılık?</h2>
-
-<div class="feature-grid">
-
-<div class="card">
-<h3>⏱️ Zamanında Teslimat</h3>
-<p>Planlı ve disiplinli operasyon yönetimi.</p>
-</div>
-
-<div class="card">
-<h3>🔒 Güvenli Taşıma</h3>
-<p>Yükünüz bizim güvencemiz altında.</p>
-</div>
-
-<div class="card">
-<h3>📄 Faturalı Hizmet</h3>
-<p>Bireysel ve kurumsal müşterilere resmi hizmet.</p>
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<section id="iletisim" class="contact">
-
-<div class="container">
-
-<h2 class="section-title" style="color:white">
-İletişim
-</h2>
+<h2 class="section-title" style="color:white;">İletişim</h2>
 
 <p><strong>Telefon:</strong> 0541 501 33 62</p>
 
-<span class="hours">
-7/24 Hizmet ✓
-</span>
+<span class="hours">7/24 Hizmet ✓</span>
 
 <br><br>
 
@@ -426,7 +414,7 @@ fatura@atılgantaşımacılık.com
 
 <br>
 
-<a href="https://wa.me/905415013362" class="btn whatsapp-btn">
+<a href="https://wa.me/905415013362" class="btn btn-whatsapp">
 WhatsApp'tan Yaz
 </a>
 
@@ -444,41 +432,26 @@ let slides=document.querySelectorAll('.slide');
 let index=0;
 
 function showSlide(i){
-
 slides.forEach(slide=>slide.classList.remove('active'));
-
 slides[i].classList.add('active');
-
 }
 
-document.querySelector('.next').onclick=()=>{
-
+document.querySelector('.next').onclick=function(){
 index++;
-
-if(index>=slides.length) index=0;
-
+if(index>=slides.length){index=0;}
 showSlide(index);
-
 };
 
-document.querySelector('.prev').onclick=()=>{
-
+document.querySelector('.prev').onclick=function(){
 index--;
-
-if(index<0) index=slides.length-1;
-
+if(index<0){index=slides.length-1;}
 showSlide(index);
-
 };
 
-setInterval(()=>{
-
+setInterval(function(){
 index++;
-
-if(index>=slides.length) index=0;
-
+if(index>=slides.length){index=0;}
 showSlide(index);
-
 },2000);
 
 </script>
