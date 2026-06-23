@@ -10,6 +10,22 @@
 
   gtag('config', 'AW-18263668881');
 </script>
+  <script
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-18263668881/p654CKaAsMQcEJHx5YRE',
+      'value': 1.0,
+      'currency': 'TRY',
+      'event_callback': callback
+  });
+  return false;
+}
+</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -265,8 +281,11 @@ font-size:30px;
 
 <div class="buttons">
 
-<a href="tel:05415013362" class="btn btn-primary">
-📞 Hemen Ara
+<a href="tel:05415013362"
+   onclick="return gtag_report_conversion('tel:05415013362');"
+   class="btn btn-primary">
+   📞 Hemen Ara
+
 </a>
 
 <a href="https://wa.me/905415013362" target="_blank" class="btn btn-whatsapp">
