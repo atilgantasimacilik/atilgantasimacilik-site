@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="tr">
 
 <head>
@@ -6,11 +7,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <!-- Google Ads -->
+
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18263668881"></script>
+
 <script>
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
+
 gtag('config', 'AW-18263668881');
 </script>
 
@@ -44,9 +48,8 @@ ATILGAN TAŞIMACILIK & LOJİSTİK
 
 <a href="tel:05415013362"
 class="phone"
-onclick="gtag('event','click',{'event_category':'phone','event_label':'header_call'});">
-0541 501 33 62
-</a>
+onclick="return gtag_report_conversion('tel:05415013362');">
+0541 501 33 62 </a>
 
 </div>
 
@@ -68,16 +71,14 @@ Bölgesel Nakliye Çözümleri ve
 
 <a href="tel:05415013362"
 class="btn primary"
-onclick="gtag('event','click',{'event_category':'phone','event_label':'hero_call'});">
-📞 Hemen Ara
-</a>
+onclick="return gtag_report_conversion('tel:05415013362');">
+📞 Hemen Ara </a>
 
 <a href="https://wa.me/905415013362"
 target="_blank"
 class="btn whatsapp"
 onclick="gtag('event','click',{'event_category':'whatsapp','event_label':'hero_whatsapp'});">
-💬 WhatsApp'tan Yaz
-</a>
+💬 WhatsApp'tan Yaz </a>
 
 </div>
 
@@ -123,7 +124,7 @@ Müşteri memnuniyeti, zamanında teslimat ve güvenli taşıma ilkelerimiz doğ
 <img src="slide6.jpeg" alt="Atılgan Taşımacılık">
 <img src="slide7.jpeg" alt="Atılgan Taşımacılık">
 <img src="slide8.jpeg" alt="Atılgan Taşımacılık">
-  
+
 </div>
 
 </div>
@@ -204,16 +205,14 @@ Reklam ve çekim ekipmanlarınızı, fuar ürünlerinizi belirlenen noktaya taş
 
 <a href="tel:05415013362"
 class="btn primary"
-onclick="gtag('event','click',{'event_category':'phone','event_label':'footer_call'});">
-📞 Hemen Ara
-</a>
+onclick="return gtag_report_conversion('tel:05415013362');">
+📞 Hemen Ara </a>
 
 <a href="https://wa.me/905415013362"
 target="_blank"
 class="btn whatsapp"
 onclick="gtag('event','click',{'event_category':'whatsapp','event_label':'footer_whatsapp'});">
-💬 WhatsApp'tan Yaz
-</a>
+💬 WhatsApp'tan Yaz </a>
 
 <div class="status">
 🟢 7/24 Hizmet
@@ -226,6 +225,21 @@ onclick="gtag('event','click',{'event_category':'whatsapp','event_label':'footer
 <footer>
 © 2025 Atılgan Taşımacılık & Lojistik
 </footer>
+
+<script>
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-18263668881/ANCxCMa1uMUcEJHx5YRE',
+      'event_callback': callback
+  });
+  return false;
+}
+</script>
 
 </body>
 </html>
